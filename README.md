@@ -9,7 +9,7 @@ Como iremos controlar o estoque do mercado, nossa aplicação deverá ter rotas 
 Vamos colocar a mão <s>na massa</s> no código!
 
 #
-    O repositório da entrega conta com o arquivo chamado *movies_workspace*. Esse arquivo é um documento de design utilizado no *insomnia*.
+    O repositório da entrega conta com o arquivo chamado *market_workspace*. Esse arquivo é um documento de design utilizado no *insomnia*.
     Ele contém todas as rotas necessárias para que a aplicação esteja de acordo com as regras impostas.
     Esse arquivo também será utilizado por instrutores e monitores na correção das entregas.
 
