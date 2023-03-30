@@ -346,7 +346,7 @@ O exemplo abaixo foi realizado na seguinte rota: `/products/242123` informando u
 
 -   Deve ser possível atualizar os dados de um produto de forma opcional.
 -   Não deve ser possível atualizar os valores de **_id_**, **_expirationDate_** e **_section_**.
-    -   **Esses dados devem ser ignorados**
+    -   **Esses dados não devem ser enviados**
 
 #### Sucesso:
 
