@@ -65,7 +65,7 @@ const deleteProduct = (request: Request, response: Response): Response => {
 
 const updateProduct = (request: Request, response: Response): Response => {
   const index = response.locals.market.indexProduct;
-  const updateData = request.body;
+  const { id, expirationDate, section, ...updateData } = request.body;
 
   market[index] = {
     ...market[index],
