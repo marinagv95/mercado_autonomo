@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction, request } from "express";
+import { Request, Response, NextFunction } from "express";
 import market from "./database";
-import { IAllMarketProduct, IProduct, IProductRequest } from "./interfaces";
+import { IAllMarketProduct, IProductRequest } from "./interfaces";
 
 const ensureProductExistMiddleware = (
   request: Request,
@@ -16,7 +16,7 @@ const ensureProductExistMiddleware = (
       error: "Produto não encontrado",
     });
   }
-  response.locals.product = {
+  response.locals.market = {
     idProduct: id,
     indexProduct: findIndex,
   };

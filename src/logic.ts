@@ -49,29 +49,22 @@ const createProduct = (request: Request, response: Response): Response => {
 const listAllProducts = (request: Request, response: Response): Response => {
   const productRequest: IProductRequest = response.locals.productRequest;
 
-  const section: any = request.query.section;
-  if (!section) {
-    return response.json(productRequest);
-  }
-
-  const sectionFilter = market.filter((product) => product.section == section);
-
-  return response.json(sectionFilter);
+  return response.status(200).json(productRequest);
 };
 
 const retrieveProducts = (request: Request, response: Response): Response => {
-  const index = response.locals.product.indexProduct;
-  return response.json(market[index]);
+  const index = response.locals.market.indexProduct;
+  return response.status(200).json(market[index]);
 };
 
 const deleteProduct = (request: Request, response: Response): Response => {
-  const index = response.locals.product.indexProduct;
+  const index = response.locals.market.indexProduct;
   market.splice(index, 1);
   return response.status(204).json();
 };
 
 const updateProduct = (request: Request, response: Response): Response => {
-  const index = response.locals.product.indexProduct;
+  const index = response.locals.market.indexProduct;
   const updateData = request.body;
 
   market[index] = {
